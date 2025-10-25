@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2: Deceptive Visualization</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #ffffff;
+            color: #333;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        .proposition {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+            font-size: 1.1em;
+            border-left: 5px solid #3498db;
+        }
+        
+        .proposition strong {
+            color: #2c3e50;
+        }
+        
+        .visualization {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .visualization img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        h3 {
+            color: #555;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .design-decisions {
+            margin: 20px 0;
+        }
+        
+        .design-decisions ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .design-decisions li {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-left: 3px solid #95a5a6;
+            border-radius: 3px;
+        }
+        
+        .design-decisions li strong {
+            color: #2c3e50;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .reflection {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 5px;
+            margin-top: 40px;
+            border: 1px solid #ddd;
+        }
+        
+        .reflection p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .data-info {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Project 2:Deceptive Visualization</h1>
+    <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0; border-left: 4px solid #3498db;">
+        <p style="margin: 5px 0;"><strong>Name:</strong> Bokyoung Son</p>
+        <p style="margin: 5px 0;"><strong>Email:</strong> boson@ucsd.edu</p>
+    </div>
+
+    <div class="proposition">
+        <strong>Proposition:</strong> Climate-related disasters are accelerating at an alarming rate in recent years.
+    </div>
+    
+    <div class="data-info">
+        <strong>Data Source:</strong> International Monetary Fund (IMF) Climate Change Indicators<br>
+        <strong>Dataset:</strong> Climate-related disasters frequency, 1980-2024<br>
+        <strong>Coverage:</strong> 209 countries, aggregated globally to annual totals
+    </div>
+
+    <h2>FOR the Proposition</h2>
+    
+    <div class="visualization">
+        <img src="Project2_Visualization_1.png" alt="Line chart showing upward trend in climate disasters from 1980 to 2024">
+        <p style="margin-top: 10px; font-style: italic; color: #666;">Climate disasters reach highest levels on record, with 2020-2024 showing accelerated frequency</p>
+    </div>
+    
+    <h3>Design Decisions and Rationale:</h3>
+    
+    <div class="design-decisions">
+        <ul>
+            <li>
+                <strong>Selection of the Strategic Time Period (1980-2024) (Score:-1.0)</strong>
+                I intentionally commenced the timeline in 1980, a year distinguished by recording one of the lowest numbers of disasters (94) on record. This anchoring effect renders subsequent growth more pronounced than it would have appeared had the starting point been 1970 or 1990. Beginning from a low point and culminating near the peak (2023–2024), the visualization underscores the period of maximum growth. This decision is somewhat misleading because, although the timeframe is factually comprehensive and accurately covers 45 years of data, the starting point was intentionally chosen to enhance visual impact rather than to offer an unbiased perspective. A more rigorous approach would have been to begin at a year closer to the historical average.
+            </li>
+            
+            <li>
+                <strong>Truncating the Y-Axis to Begin at 50   (Score:-1.5)</strong>
+                The Y-axis starts at 50 rather than the conventional 0, thereby exaggerating the perceived slope of the increase by approximately 19%. This results in the upward trend appearing more pronounced than it would if a zero baseline were employed. I examined multiple starting points (0, 30, 50, and 75) and determined that 50 offers the optimal balance—steep enough to highlight acceleration, yet subtle enough to avoid immediate detection by casual readers. This technique is commonly utilized in scientific visualizations to highlight relevant data ranges, thereby improving their validity. However, it remains one of my more ambiguous decisions, as it directly influences the perceived intensity of the trend. The truncation is sufficiently subtle that most readers will not examine the axis origin unless they are intentionally seeking indications of manipulation.            </li>
+            
+            <li>
+                <strong>Emphasis on Color Psychology and Recent Time Period (Score:-0.5)</strong>
+                I use darker red tones to highlight the recent period of acceleration. The color red is psychologically linked to danger, urgency, and warning, thereby inclining readers to perceive the data as alarming before consciously processing the numerical information. I modified the brighter reds from my checkpoint to more subdued burgundy and crimson hues to convey a more academic and professional appearance while maintaining the emotional impact. The period from 2020 to 2024 is highlighted with thicker lines and larger markers to emphasize its significance. This is somewhat misleading, as color serves a rhetorical function that goes beyond simple data differentiation, aiming to evoke an emotional response. However, color choices are widely acknowledged in visualization practice, making this a relatively subtle form of persuasion.            </li>
+            
+            <li>
+                <strong>Annotation of Peak Year Using Precise Language (Score +:0.5)</strong>
+                I label the 2023 peak of 398 disasters as "Record High: 398 disasters." This is primarily earnest because it accurately identifies a factual maximum and helps readers locate the most significant data point. In my checkpoint submission, I utilized more emphatic language, exemplified by the use of "RECORD HIGH" in uppercase letters accompanied by multiple exclamation marks. For the final version, I revised the text to employ standard capitalization and neutral phrasing. The positioning and formatting of the annotations effectively highlight these data points, thereby reinforcing my argument; moreover, this exemplifies an appropriate use of annotation to emphasize significant features. The decision to annotate at all may be considered somewhat persuasive (particularly since I do not annotate other advanced years), yet the language itself remains factual and measured.            </li>
+            
+            <li>
+                <strong> Quadratic Polynomial Trendline  (Score:-1.0)</strong>
+                I overlaid a second-degree polynomial (quadratic) curve to suggest accelerating growth—the curve bends upward, visually reinforcing the "acceleration" narrative in my proposition. This is misleading because I intentionally chose a quadratic model rather than a linear one to emphasize "acceleration" rather than simply an "increase." A linear trend indicates steady growth, whereas a quadratic trend implies an accelerating rate of increase. I evaluated polynomial fits of degrees one (linear), two (quadratic), and three (cubic). The quadratic model offered the most visually compelling representation of "acceleration" while maintaining a reasonable fit to the data (with an adequate R²). The curve appears scientifically grounded and data-driven, thereby enhancing its credibility; however, the choice of the polynomial degree was motivated by rhetorical considerations rather than by statistical optimization. The technique is nuanced because many readers regard trend lines as objective mathematical summaries without critically evaluating the selection of the polynomial degree.            </li>
+        </ul>
+    </div>
+
+    <h2>AGAINST the Proposition</h2>
+    
+    <div class="visualization">
+        <img src="Project2_Visualization_2.png" alt="Bar chart showing decade averages with error bars, highlighting 2010s decline">
+        <p style="margin-top: 10px; font-style: italic; color: #666;">Decadal averages reveal fluctuations including 2010s decline, questioning consistent acceleration</p>
+    </div>
+    
+    <h3>Design Decisions and Rationale:</h3>
+    
+    <div class="design-decisions">
+        <ul>
+            <li>
+                <strong>Temporal Aggregation at the Decadal Scale (Score:-1.5)</strong>
+                I aggregated the annual data into decade-level averages (1980s, 1990s, 2000s, 2010s, 2020s) to mitigate year-to-year volatility and highlight the specific trend of interest: the decline from the 2000s to the 2010s (345 to 317 disasters per year, an 8.2% decrease). This level of aggregation was strategically chosen after evaluating multiple binning schemes. Monthly or yearly granularity introduces excessive noise, obscuring the decline, while multi-decade periods (e.g., 1980–2000, 2000–2020) entirely conceal the 2010s dip that underpins my argument. Importantly, I considered the 2020s as an incomplete five-year period rather than excluding it or projecting it to encompass a full decade, thereby allowing me to classify it as uncertain. This is highly misleading because the temporal binning directly affects which patterns emerge, and I intentionally selected the specific bin size that most clearly emphasizes the decline while obscuring the long-term upward trend.             </li>
+            
+            <li>
+                <strong>Compressed Y-Axis Starting at 100 (Score: -1.5)</strong>
+                The Y-axis begins at 100 rather than 0, resulting in an approximate 23% compression of the visual height differences between decades. Consequently, the overall multi-decade increase appears less pronounced, as the bars representing the 1980s at 133 and the 2020s at 380 seem closer in height than they would if measured from a zero baseline. Importantly, while Visualization 1 employs axis truncation to accentuate differences, I utilize it here to diminish them. This is highly misleading because it entails the inverse application of the same technique in my two visualizations, each designed to support contradictory arguments. The inconsistent treatment of axes complicates direct comparisons between my visualizations, thereby obscuring the underlying contradiction. The compression is subtle yet effective, as it visually highlights the decline of the 2010s relative to adjacent bars while reducing the perceived magnitude of the significant long-term growth from the 1980s to the 2020s.             </li>
+            
+            <li>
+                <strong>Error Bars Representing Standard Deviation  (Score:-0.5)</strong>
+                I included error bars representing the standard deviation to highlight within-decade variability, thereby reinforcing the narrative of natural fluctuation. The error bars are factually accurate—they correctly represent the spread of annual values within each decade. However, their inclusion is strategically intended to fulfill a rhetorical function. Notably, Visualization 1 does not display any error bars or confidence intervals, despite the annual data exhibiting comparable variance. By incorporating error bars solely into this visualization, I enhance its scientific rigor while simultaneously introducing visual ambiguity regarding the observed trends. The large error bars, especially for the 2000s and 2020s, suggest that the decade averages may not serve as stable or reliable indicators. This is mildly deceptive because the choice to include/exclude error bars across visualizations is rhetorical rather than methodological, though the error bars themselves are honest statistical representations.            </li>
+            
+            <li>
+                <strong>Selective Annotation with an Emphasis on Decline  (Score:-1.0)</strong>
+                I specifically annotate the 2010s bar with the phrase "decline in 2010s following 2000s peak" to clearly draw the reader’s attention to the distinct period during which disasters experienced a decrease. I evaluated various annotation placements and phrasings, refining the initial, more explicit checkpoint label of "2010s DECLINE after 2000s peak" to a more neutral and academically appropriate expression. The annotation is misleading due to its selective nature: it highlights only the single decline that supports my argument of "no consistent acceleration," while omitting the increases of 66% from the 1980s to 1990s, 56% from the 1990s to 2000s, and 20% from the 2010s to 2020s. This selective annotation actively influences the decade-to-decade comparisons that readers undertake. If I had annotated all transitions or none, the visualization would be more neutral. The technique is subtle because the annotation language itself is factual and measured, but its selective application guides interpretation.            </li>
+            
+            <li>
+                <strong>Characterizing the 2020s as a Period Marked by Incomplete and Uncertain Data  (Score:-1.0)</strong>
+                I added an asterisk to "2020s*" to indicate its potential unreliability due to incomplete sampling. This is misleading because, although it is factually accurate that the 2020s decade is not yet complete, the framing suggests unwarranted uncertainty. A five-year period represents a substantial sample, with the average annual number of disasters in the 2020s consistently ranging from 360 to 398, reflecting a stable high frequency rather than anomalous outliers. The framing suggests that additional data should be awaited before drawing conclusions, thereby casting doubt on whether the 2020s truly represent a period of acceleration or might, instead, experience a decline similar to that of the 2010s. I revised the phrasing from the explicitly biased term "partial/incomplete data" used in my checkpoint to the more neutral expression "covering only five years," while maintaining the rhetorical purpose of questioning the validity of evidence that contradicts my argument.            </li>
+        </ul>
+    </div>
+
+    <h2>Final Reflection</h2>
+    
+    <div class="reflection">
+        <p>This project made me recognize that visualization choices are never entirely neutral; each one inherently carries rhetorical significance, whether intentional or not. The distinction between "persuasion" and "deception" is not absolute but rather exists along a continuum, with context playing a crucial role in determining the placement of specific techniques. The most challenging aspect I encountered was calibrating deception to the "detectable only upon close examination" level as specified in the rubric. Techniques such as axis truncation and deliberate timeframe selection are well-documented methods of manipulation; however, they remain highly effective because most readers do not critically examine axes or question temporal boundaries. This highlights a concerning asymmetry: ethical visualization demands both the intentionality of the creator and the vigilance of the viewer, yet casual readers often lack the time or expertise to critically evaluate every chart they encounter.</p>
+        
+        <p>The process of producing contrasting visualizations illustrated how the same technique can serve opposing rhetorical purposes depending on its application. The most significant finding was that axis truncation was used to exaggerate differences in Visualization 1 (by commencing the Y-axis at 50) while concurrently being applied to minimize differences in Visualization 2 (by starting at 100). This inconsistency complicates direct comparison of my visualizations, as readers are unable to easily view them side-by-side or identify contradictions resulting from distorted relative magnitudes caused by varying axis scales. This insight suggests that ethical visualization isn't just about individual design choices but about consistency and transparency across a body of work. If both visualizations utilized identical axis conventions, readers could more readily compare them and recognize that both can't simultaneously be "true" representations of the same underlying data. </p>
+        <p>Upon completing this assignment, I define "ethical analysis and visualization" as a practice that prioritizes the reader’s comprehension and decision-making ability over rhetorical triumph. This means maintaining methodological consistency (especially when creating comparative visualizations), making data transformation choices transparent, and avoiding techniques whose primary function is to obscure rather than illuminate. Effective persuasive strategies encompass the consistent application of color and annotation across comparable visuals; the selection of aggregation methods that accurately reveal underlying patterns without selectively choosing time frames; and the use of framing language that provides contextual support without biasing interpretation. Misleading practices encompass axis manipulations that exaggerate or diminish effects without proper disclosure; selective inclusion or exclusion of relevant data points that contradict the intended narrative; and inconsistent application of techniques, such as error bars or trend lines, across comparative visualizations to create deceptive impressions of certainty or uncertainty. </p>
+        <p>However, completing this project leaves me uncertain about where exactly to draw ethical boundaries. Choosing 1980 as the starting point for Visualization 1, rather than 1970 or 1990, establishes different baselines and consequently results in varying slopes. Is any starting year genuinely neutral, or do all temporal boundaries inherently generate anchoring effects? Similarly, color psychology primarily operates below the level of conscious awareness, with red signaling "increase" and blue indicating "variability," thereby eliciting emotional responses prior to rational consideration. Is this an inherent form of manipulation, or merely effective communication that capitalizes on the mechanisms of human perception? These questions indicate that achieving perfect objectivity in visualization may be unattainable, and that transparency regarding methodology may be both more feasible and more intellectually honest than asserting neutrality. Arguably, the most ethical approach is not to eschew all persuasive techniques—which may be impracticable—but to be transparent about the decisions made, the alternatives evaluated, and the interpretative implications of those choices. This would empower readers to mentally adjust for known biases rather than claiming nonexistent objectivity.</p>
+        <p>What I found most creative about my approach was discovering that the same technique—axis truncation—could serve diametrically opposed rhetorical purposes depending on its application. Beginning the Y-axis at 50 in Visualization 1 (thereby exaggerating the slope) and at 100 in Visualization 2 (thereby compressing differences) produced visuals that convey contrasting yet initially persuasive narratives. This highlights how deception often lies not in individual techniques but in their inconsistent application across comparative work. Similarly, my use of error bars—statistically valid yet selectively applied—demonstrates how legitimate statistical tools can be manipulated through strategic inclusion or omission. These approaches reflect a sophisticated understanding that the most effective deception uses accurate data and established techniques but applies them strategically to guide interpretation.</p>
+
+</body>
+</html>
